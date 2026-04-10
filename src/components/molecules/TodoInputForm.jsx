@@ -24,7 +24,7 @@ const TodoInputForm = memo(function TodoInputForm({ onAdd }) {
         onChange={handleChange}
         placeholder={t('placeholder')}
       />
-      <Button type="submit" variant="primary">
+      <Button type="submit" variant="primary" disabled={!inputValue.trim()}>
         {t('add')}
       </Button>
     </form>

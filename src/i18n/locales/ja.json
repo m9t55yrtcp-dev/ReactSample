@@ -4,6 +4,9 @@
   "add": "追加",
   "delete": "削除",
   "count": "残り {{remaining}} / {{total}} タスク",
+  "empty": "タスクがありません。追加してみましょう！",
+  "menu.open": "メニューを開く",
+  "menu.language": "言語",
   "initialTodos": {
     "learn": "Reactを学ぶ",
     "component": "コンポーネントを作る",

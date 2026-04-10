@@ -4,6 +4,9 @@
   "add": "Add",
   "delete": "Delete",
   "count": "{{remaining}} / {{total}} remaining",
+  "empty": "No tasks yet. Add one to get started!",
+  "menu.open": "Open menu",
+  "menu.language": "Language",
   "initialTodos": {
     "learn": "Learn React",
     "component": "Build components",

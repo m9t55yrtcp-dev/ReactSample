@@ -7,7 +7,7 @@ const LANGUAGES = [
   { code: 'en', label: 'English' },
 ]
 
-const LanguageSwitcher = memo(function LanguageSwitcher() {
+const LanguageSwitcher = memo(function LanguageSwitcher({ onSelect }) {
   const { i18n } = useTranslation()
 
   return (
@@ -15,7 +15,7 @@ const LanguageSwitcher = memo(function LanguageSwitcher() {
       {LANGUAGES.map(({ code, label }) => (
         <Button
           key={code}
-          onClick={() => i18n.changeLanguage(code)}
+          onClick={() => { i18n.changeLanguage(code); onSelect?.() }}
           variant="ghost"
           active={i18n.language === code}
         >

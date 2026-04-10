@@ -1,4 +1,5 @@
 import { memo } from 'react'
+import { useTranslation } from 'react-i18next'
 import TodoInputForm from '../molecules/TodoInputForm'
 import TodoCount from '../molecules/TodoCount'
 import TodoItem from '../molecules/TodoItem'
@@ -13,22 +14,27 @@ const styles = {
 }
 
 const TodoList = memo(function TodoList({ todos, onAdd, onToggle, onDelete }) {
+  const { t } = useTranslation()
   const remaining = todos.filter((t) => !t.done).length
 
   return (
     <div className={styles.card}>
       <TodoInputForm onAdd={onAdd} />
       <TodoCount remaining={remaining} total={todos.length} />
-      <ul className={styles.list}>
-        {todos.map((todo) => (
-          <TodoItem
-            key={todo.id}
-            todo={todo}
-            onToggle={onToggle}
-            onDelete={onDelete}
-          />
-        ))}
-      </ul>
+      {todos.length === 0 ? (
+        <p className="py-8 text-center text-sm text-gray-400">{t('empty')}</p>
+      ) : (
+        <ul className={styles.list}>
+          {todos.map((todo) => (
+            <TodoItem
+              key={todo.id}
+              todo={todo}
+              onToggle={onToggle}
+              onDelete={onDelete}
+            />
+          ))}
+        </ul>
+      )}
     </div>
   )
 })

@@ -1,7 +1,8 @@
 import { memo } from 'react'
 import clsx from 'clsx'
 
-const base = 'cursor-pointer transition whitespace-nowrap'
+const base = 'transition whitespace-nowrap'
+const disabledStyle = 'opacity-40 cursor-not-allowed'
 
 const variants = {
   primary: [
@@ -29,13 +30,21 @@ const Button = memo(function Button({
   type = 'button',
   variant = 'ghost',
   active = false,
+  disabled = false,
   className,
 }) {
   return (
     <button
       type={type}
       onClick={onClick}
-      className={clsx(base, variants[variant], active && ghostActive, className)}
+      disabled={disabled}
+      className={clsx(
+        base,
+        disabled ? disabledStyle : 'cursor-pointer',
+        variants[variant],
+        active && ghostActive,
+        className,
+      )}
     >
       {children}
     </button>
