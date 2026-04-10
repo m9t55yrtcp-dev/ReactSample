@@ -1,0 +1,12 @@
+{
+  "title": "Todoリスト",
+  "placeholder": "新しいタスクを入力...",
+  "add": "追加",
+  "delete": "削除",
+  "count": "残り {{remaining}} / {{total}} タスク",
+  "initialTodos": {
+    "learn": "Reactを学ぶ",
+    "component": "コンポーネントを作る",
+    "finish": "アプリを完成させる"
+  }
+}

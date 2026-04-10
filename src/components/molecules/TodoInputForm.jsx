@@ -1,8 +1,10 @@
 import { memo, useCallback, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import Input from '../atoms/Input'
 import Button from '../atoms/Button'
 
 const TodoInputForm = memo(function TodoInputForm({ onAdd }) {
+  const { t } = useTranslation()
   const [inputValue, setInputValue] = useState('')
 
   const handleChange = useCallback((e) => setInputValue(e.target.value), [])
@@ -20,10 +22,10 @@ const TodoInputForm = memo(function TodoInputForm({ onAdd }) {
       <Input
         value={inputValue}
         onChange={handleChange}
-        placeholder="新しいタスクを入力..."
+        placeholder={t('placeholder')}
         className="todo-input"
       />
-      <Button type="submit" className="add-button">追加</Button>
+      <Button type="submit" className="add-button">{t('add')}</Button>
     </form>
   )
 })

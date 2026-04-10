@@ -1,0 +1,12 @@
+{
+  "title": "Todo List",
+  "placeholder": "Enter a new task...",
+  "add": "Add",
+  "delete": "Delete",
+  "count": "{{remaining}} / {{total}} remaining",
+  "initialTodos": {
+    "learn": "Learn React",
+    "component": "Build components",
+    "finish": "Complete the app"
+  }
+}

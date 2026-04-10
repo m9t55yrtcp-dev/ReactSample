@@ -1,12 +1,14 @@
 import { useCallback, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import MainTemplate from '../components/templates/MainTemplate'
 import TodoList from '../components/organisms/TodoList'
 
 function TodoPage() {
-  const [todos, setTodos] = useState([
-    { id: 1, text: 'Reactを学ぶ', done: false },
-    { id: 2, text: 'コンポーネントを作る', done: false },
-    { id: 3, text: 'アプリを完成させる', done: false },
+  const { t } = useTranslation()
+  const [todos, setTodos] = useState(() => [
+    { id: 1, text: t('initialTodos.learn'), done: false },
+    { id: 2, text: t('initialTodos.component'), done: false },
+    { id: 3, text: t('initialTodos.finish'), done: false },
   ])
 
   const addTodo = useCallback((text) => {
@@ -22,7 +24,7 @@ function TodoPage() {
   }, [])
 
   return (
-    <MainTemplate title="Todoリスト">
+    <MainTemplate title={t('title')}>
       <TodoList todos={todos} onAdd={addTodo} onToggle={toggleTodo} onDelete={deleteTodo} />
     </MainTemplate>
   )

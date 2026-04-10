@@ -1,8 +1,10 @@
 import { memo } from 'react'
+import { useTranslation } from 'react-i18next'
 
 const TodoCount = memo(function TodoCount({ remaining, total }) {
+  const { t } = useTranslation()
   return (
-    <p className="todo-count">残り {remaining} / {total} タスク</p>
+    <p className="todo-count">{t('count', { remaining, total })}</p>
   )
 })
 
