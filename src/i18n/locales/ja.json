@@ -7,6 +7,8 @@
   "empty": "タスクがありません。追加してみましょう！",
   "menu.open": "メニューを開く",
   "menu.language": "言語",
+  "sidebar.toggle": "サイドバーを切り替え",
+  "sidebar.todoList": "Todoリスト",
   "initialTodos": {
     "learn": "Reactを学ぶ",
     "component": "コンポーネントを作る",

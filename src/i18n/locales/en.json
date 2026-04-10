@@ -7,6 +7,8 @@
   "empty": "No tasks yet. Add one to get started!",
   "menu.open": "Open menu",
   "menu.language": "Language",
+  "sidebar.toggle": "Toggle sidebar",
+  "sidebar.todoList": "Todo List",
   "initialTodos": {
     "learn": "Learn React",
     "component": "Build components",
