@@ -1,7 +1,7 @@
 import { memo } from 'react'
 import clsx from 'clsx'
 
-const base = 'w-[18px] h-[18px] shrink-0 cursor-pointer accent-blue-500'
+const base = 'w-[18px] h-[18px] shrink-0 cursor-pointer accent-brand'
 
 const Checkbox = memo(function Checkbox({ checked, onChange, className }) {
   return (
