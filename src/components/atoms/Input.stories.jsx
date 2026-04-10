@@ -6,7 +6,6 @@ export default {
   component: Input,
   args: {
     placeholder: '新しいタスクを入力...',
-    className: 'todo-input',
   },
 }
 

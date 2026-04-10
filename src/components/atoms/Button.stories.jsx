@@ -8,19 +8,31 @@ export default {
   },
 }
 
-export const Default = {}
-
-export const Submit = {
+export const Primary = {
   args: {
     children: '追加',
-    type: 'submit',
-    className: 'add-button',
+    variant: 'primary',
   },
 }
 
-export const Delete = {
+export const Danger = {
   args: {
     children: '削除',
-    className: 'delete-button',
+    variant: 'danger',
+  },
+}
+
+export const Ghost = {
+  args: {
+    children: '日本語',
+    variant: 'ghost',
+  },
+}
+
+export const GhostActive = {
+  args: {
+    children: '日本語',
+    variant: 'ghost',
+    active: true,
   },
 }

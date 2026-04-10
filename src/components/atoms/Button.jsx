@@ -1,8 +1,42 @@
 import { memo } from 'react'
+import clsx from 'clsx'
 
-const Button = memo(function Button({ children, onClick, type = 'button', className }) {
+const base = 'cursor-pointer transition whitespace-nowrap'
+
+const variants = {
+  primary: [
+    'shrink-0 px-4 py-2.5 sm:px-5',
+    'bg-blue-500 text-white rounded-lg text-base',
+    'hover:bg-blue-600',
+  ].join(' '),
+  danger: [
+    'shrink-0 px-2.5 py-1',
+    'text-red-500 border border-red-500 rounded-md text-xs',
+    'hover:bg-red-500 hover:text-white',
+  ].join(' '),
+  ghost: [
+    'px-3 py-1.5 border rounded-md text-xs',
+    'text-gray-500 border-gray-300',
+    'hover:bg-gray-100 hover:text-gray-700',
+  ].join(' '),
+}
+
+const ghostActive = 'bg-blue-500 text-white border-blue-500 hover:bg-blue-600'
+
+const Button = memo(function Button({
+  children,
+  onClick,
+  type = 'button',
+  variant = 'ghost',
+  active = false,
+  className,
+}) {
   return (
-    <button type={type} onClick={onClick} className={className}>
+    <button
+      type={type}
+      onClick={onClick}
+      className={clsx(base, variants[variant], active && ghostActive, className)}
+    >
       {children}
     </button>
   )
