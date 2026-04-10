@@ -14,7 +14,7 @@ function MainTemplateWithState({ title, children }) {
 
 const content = <p className="text-gray-400 text-sm">ここにコンテンツが入ります</p>
 
-export const SidebarOpen = {
+export const Default = {
   render: () => <MainTemplateWithState title="Todoリスト">{content}</MainTemplateWithState>,
 }
 
