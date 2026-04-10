@@ -12,7 +12,7 @@ const styles = {
     'transition hover:bg-gray-100',
     'sm:px-4',
   ].join(' '),
-  text: 'flex-1 min-w-0 text-[0.9375rem] break-words',
+  text: 'flex-1 min-w-0 text-md break-words',
 }
 
 const TodoItem = memo(function TodoItem({ todo, onToggle, onDelete }) {

@@ -10,7 +10,7 @@ const styles = {
   ].join(' '),
   title: [
     'text-xl font-bold text-[#1a1a2e] tracking-tight whitespace-nowrap',
-    'sm:text-[1.375rem]',
+    'sm:text-title',
   ].join(' '),
   main: [
     'flex-1 w-full max-w-2xl mx-auto',
